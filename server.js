@@ -70,6 +70,38 @@ io.on('connection', (socket) => {
   });
 });
 
+// for video app
+
+let clients = 0;
+
+io.on('connection', function (socket) {
+  socket.on('NewClient', function () {
+    if (clients < 2) {
+      if (clients == 1) {
+        this.emit('CreatePeer');
+      }
+    } else this.emit('SessionActive');
+    clients++;
+  });
+  socket.on('Offer', SendOffer);
+  socket.on('Answer', SendAnswer);
+  socket.on('disconnect', Disconnect);
+});
+
+function Disconnect() {
+  if (clients > 0) {
+    clients--;
+  }
+}
+
+function SendOffer(offer) {
+  this.broadcast.emit('BackOffer', offer);
+}
+
+function SendAnswer(data) {
+  this.broadcast.emit('BackAnswer', data);
+}
+
 const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
