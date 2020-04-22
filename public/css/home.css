@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.site-header {
+  width: 100%;
+  height: 150vh;
+  background: #ffffff;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  /*background-color:  red;*/
+  display: flex;
+  color: rgb(29, 97, 175);
+}
+
+.logo {
+  width: 50%;
+  height: 100px;
+}
+
+.logopos {
+  width: 40px;
+  height: 35px;
+}
+
+.logo h1 {
+  line-height: 100px;
+  padding-left: 100px;
+}
+
+.menu {
+  width: 50%;
+  height: 100px;
+}
+
+.menu ul {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu ul li {
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(29, 97, 175);
+}
+
+section {
+  display: flex;
+}
+
+.leftside {
+  width: 45%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.leftside img {
+  padding-left: 5%;
+  width: 600px;
+  height: 500px;
+}
+
+.rightside {
+  width: 55%;
+  height: 300px;
+  color: rgb(29, 97, 175);
+  text-align: center;
+  margin-top: 80px;
+  padding: 40px;
+}
+
+.rightside h1 {
+  text-align: center;
+  color: rgb(29, 97, 175);
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.rightside p {
+  font-size: 1.1rem;
+  padding: 30px 0;
+}
+
+.rightside button {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: linear-gradient(57deg, #00c6a7, #1e4d92);
+  border-radius: 4px 4px 4px 4px;
+  padding: 20px 35px;
+}
+
+.rightside button:hover {
+  background: linear-gradient(57deg, #1e4d92, #00c6a7);
+}
+
+.boton {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 0;
+  margin-right: 50px;
+  overflow: hidden;
+  position: relative;
+  transform: translatez(0);
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: normal;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.2);
+}
+
+.instagram {
+  text-align: center;
+  border-radius: 50px;
+  padding: 26px;
+  color: white;
+  background: rgb(29, 97, 175);
+  transition: all 0.2s ease-out 0s;
+}
+
+#button1,
+#button2 {
+  display: inline-block;
+  /**other codes**/
+}
+
+@media (max-width: 700px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .site-header {
+    width: 100vh;
+    height: 200vh;
+    background: #ffffff;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 80px;
+  }
+
+  .mobview {
+    font-size: large;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .leftside {
+    display: none;
+  }
+
+  .rightside h1 {
+    text-align: end;
+    color: rgb(29, 97, 175);
+    font-size: 50px;
+    font-weight: 900;
+    margin-left: 35%;
+    margin-right: 35%;
+    text-transform: uppercase;
+  }
+
+  .boton {
+    display: block;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 0;
+    margin-left: 30%;
+    margin-right: 30%;
+    overflow: hidden;
+    position: relative;
+    transform: translatez(0);
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: normal;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  .instagram {
+    text-align: center;
+    border-radius: 50px;
+    padding: 26px;
+    color: white;
+    background: rgb(29, 97, 175);
+    transition: all 0.2s ease-out 0s;
+  }
+}
